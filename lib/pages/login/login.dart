@@ -10,11 +10,37 @@ class LoginPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(height: 50),
             Image.asset("assets/images/login.png"),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               "Welcome",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            )
+            ),
+            const SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: const InputDecoration(
+                        hintText: "Enter username", labelText: "Username"),
+                  ),
+                  const SizedBox(height: 10),
+                  TextFormField(
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                        hintText: "Enter Password", labelText: "Password"),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  print("login print");
+                },
+                child: const Text("Login"))
           ],
         ),
       ),
