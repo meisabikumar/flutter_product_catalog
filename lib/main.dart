@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page/home_page.dart';
 import 'pages/login/login.dart';
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.openSans().fontFamily),
       // home: HomePage(),
       // initialRoute: "/home",
       routes: {
